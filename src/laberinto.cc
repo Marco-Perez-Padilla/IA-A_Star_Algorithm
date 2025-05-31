@@ -236,6 +236,7 @@ bool Laberinto::ChangeStart(long unsigned int StartRow, long unsigned int StartC
   if (newStart) { 
     // Set it
     setStart(newStart);
+    getStart()->setWall(0);
     UpdateHeuristic(kHeuristic, getEnd());
     return true;
   } else { // If nullptr, error message
@@ -278,6 +279,7 @@ bool Laberinto::ChangeEnd(long unsigned int EndRow, long unsigned int EndColumn)
   Casilla* newEnd = getCasilla(EndRow, EndColumn);
   if (newEnd) { // If it isn't a wall, set it
     setEnd(newEnd);
+    getEnd()->setWall(0);
     //Updating the heuristic
     UpdateHeuristic(kHeuristic, getEnd());
     return true;
