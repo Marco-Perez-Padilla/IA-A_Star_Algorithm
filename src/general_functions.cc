@@ -59,15 +59,15 @@ void Help () {
  * @param char option to be used
  */
 void menu (char &opcion) {
-  std::cout << "m. Show the [m]aze in the standard output" << std::endl;
   std::cout << "c. [c]harge new maze" << std::endl;     
-  std::cout << "h. Change the [h]euristic for the research" << std::endl;
-  std::cout << "g. [g]enerate inform" << std::endl;          
+  std::cout << "g. [g]enerate inform" << std::endl; 
+  std::cout << "a. Execute the [a]* [a]lgorithm and print the results in the output file" << std::endl;
+  std::cout << "m. Show the [m]aze in the standard output" << std::endl;
+  std::cout << "p. [p]rint the maze in the specified output file" << std::endl;
   std::cout << "s. Change [s]tart coordinates" << std::endl;
   std::cout << "f. Change [f]inish coordinates" << std::endl;
+  std::cout << "h. Change the [h]euristic for the research" << std::endl;
   std::cout << "v. Change [v]alue factor to multiply Manhattan Distance" << std::endl;
-  std::cout << "p. [p]rint the maze in the specified output file" << std::endl;
-  std::cout << "a. Execute the [a]* [a]lgorithm and print the results in the output file" << std::endl;
   std::cout << "q. [q]uit the program" << std::endl;
   std::cout << "Introduce the option to execute  > ";
   std::cin >> opcion;
@@ -120,7 +120,7 @@ bool ValidateFile (const std::string& name) {
  */
 void CheckFileError (const std::string& name) {
   if (ValidateFile(name)) return;
-  std::cerr << "Error in input file: Wrong extension. Please, try \"p06_automata_simulator --help\" for further information" << std::endl;
+  std::cerr << "Error in input file: Wrong extension. Please, try \"AStarAlgorithm --help\" for further information" << std::endl;
   exit(EXIT_FAILURE);
 }
 

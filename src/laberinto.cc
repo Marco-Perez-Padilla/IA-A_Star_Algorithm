@@ -525,8 +525,3 @@ void Laberinto::MostrarCamino(std::vector<Casilla*>& path, std::ofstream& archiv
   archivo << "Coste: ";
   archivo << getEnd()->getFunction() << std::endl;
 }
-
-
-/***
- * DEPURAR IMPRIMIENDO EN PANTALLA LAS HEURISTICAS, LOS COSTES Y LAS FUNCIONES
- */
