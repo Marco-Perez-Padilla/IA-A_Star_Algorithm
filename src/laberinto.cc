@@ -126,6 +126,23 @@ void Laberinto::ChangeMaze(std::istream& input) {
 
 
 /**
+ * @brief Method to reset all the nodes of the maze. Preparing the maze for a new execution
+ */
+void Laberinto::ResetNodes() {
+  for (auto& row : laberinto_) {
+    for (auto& cell : row) {
+      if (cell) {
+        cell->setCoste(cell == start_ ? 0 : INT_MAX);
+        cell->setPadre(nullptr);
+        cell->setPath(false);
+      }
+    }
+  }
+  UpdateHeuristic(kHeuristic, end_);
+}
+
+
+/**
  * @brief Method that updates the maze to Manhattan Distance heuristic
  * @param Casilla end, to be able to calculate the new values
  */
@@ -368,22 +385,6 @@ long double Laberinto::Heuristic(char heuristic, int start_row, int end_row, int
     return EuclideanDistance(start_row, end_row, start_column, end_column);
   } else { return -1;}
 }
-
-
-
-void Laberinto::ResetNodes() {
-  for (auto& row : laberinto_) {
-    for (auto& cell : row) {
-      if (cell) {
-        cell->setCoste(cell == start_ ? 0 : INT_MAX);
-        cell->setPadre(nullptr);
-        cell->setPath(false);
-      }
-    }
-  }
-  UpdateHeuristic(kHeuristic, end_);
-}
-
 
 
 /**
