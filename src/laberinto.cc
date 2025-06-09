@@ -364,7 +364,7 @@ const long unsigned int Laberinto::ManhattanDistance (int start_row, int end_row
  * @return double type, result of the calulation
  */
 const long double Laberinto::EuclideanDistance(int start_row, int end_row, int start_column, int end_column) {
-  return (std::sqrt(pow((end_row - start_row), 2) + pow((end_column - start_column), 2)) * 2);
+  return (std::sqrt(pow((end_row - start_row), 2) + pow((end_column - start_column), 2)));
 }
 
 
