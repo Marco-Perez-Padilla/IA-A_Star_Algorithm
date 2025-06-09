@@ -130,7 +130,7 @@ int main(int argc, char* argv[]) {
             break;
         }
         laberinto.UpdateHeuristic(kHeuristic, laberinto.getEnd());
-        std::cout << "Heuristic succesfully changed: " << std::endl;
+        std::cout << "Heuristic succesfully changed: " << kHeuristic << std::endl;
         pressanykey();
         clrscr();
         break;
@@ -202,7 +202,7 @@ int main(int argc, char* argv[]) {
         // Ask for new multiply factor
         std::cout << "Select a new factor to multiply the manhattan distance heuristic (standard is 3)" << std::endl;
         std::cin >> kFactor;
-        std::cout << "Change successful" << std::endl;
+        std::cout << "Change successful to " << kFactor << std::endl;
         pressanykey();
         clrscr();
         break;
