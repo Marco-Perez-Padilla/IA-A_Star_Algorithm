@@ -96,7 +96,7 @@ void WriteInform (std::ofstream& outfile) {
   outfile << "de las casillas. Gracias a ello, se mantiene siempre en primera posición la Casilla que el algoritmo debe seleccionar. Como criterio de parada, no es que se encuentre la meta, sino que se" << std::endl;
   outfile << "seleccione, garantizando así que el camino es mínimo. Una vez es seleccionado, se hace baktracking y se guardan las Casillas que forman parte del camino en un vector que se podrá imprimir" << std::endl;
   outfile << "más tarde. Por otro lado, es reseñable que la clase Casilla apenas tiene funcionalidades, siendo más bien una clase interfaz." << std::endl;
-  outfile << "    Por otro lado, he elegido la distancia euclídea multiplicada por dos como heurística alternativa para tener en cuenta las paredes del laberinto y al no poder usar la distancia Euclídea sola" << std::endl;
+  outfile << "    Por otro lado, he elegido la distancia euclídea como heurística alternativa. Como los laberintos admiten paredes, la distancia euclídea siempre subestimará el coste real" << std::endl;
 }
 
 
