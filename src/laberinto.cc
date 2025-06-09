@@ -76,6 +76,9 @@ void Laberinto::read(std::istream& input) {
             delete maze[k][l]; // Delete all the casillas
           }
         }
+        for (unsigned int l = 0; l < j; ++l) {
+          delete maze[i][l];
+        }
         std::cerr << "Error reading the cell (" << i << ", " << j << ")" << std::endl;
         return;
       }
